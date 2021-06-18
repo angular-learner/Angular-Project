@@ -9,7 +9,7 @@ import { Ingredient } from 'src/app/shared/ingredient.model';
 export class ShoppingEditComponent implements OnInit {
 @ViewChild('nameInput') nameInput: ElementRef;
 @ViewChild('amountInput') amountInput: ElementRef;
-@Output ingredientAdded = new EventEmitter<Ingredient>();
+@Output() ingredientAdded = new EventEmitter<Ingredient>();
 
   constructor() { }
 

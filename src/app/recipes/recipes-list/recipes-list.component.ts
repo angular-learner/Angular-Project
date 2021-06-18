@@ -15,7 +15,7 @@ recipes : Recipe[]=[
 ];
   constructor() { }
 
-  ngOnInit(){
+  ngOnInit() {
   }
   onItemSelected(item: Recipe){
     this.selectedItemFL.emit(item);
