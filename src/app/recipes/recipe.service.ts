@@ -23,6 +23,6 @@ getRecipes(){
     return this.recipes.slice();
 }
 addIngredientsToSL(ingredients: Ingredient[]){
-this.slService.addIngredients(ingredients);
+this.slService.addIngredients(ingredients)
 }
 }
