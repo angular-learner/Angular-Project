@@ -19,8 +19,8 @@ recipes : Recipe[];
   ngOnInit() {
     this.recipes = this.recipeService.getRecipes();
   }
-//  onNewRecipe(){
-// this.route.navigate(['/new'], {relativeTo: this.router})
-//  }
+onNewRecipe(){
+this.route.navigate(['new'], {relativeTo: this.router}) 
+ }
 
 }
