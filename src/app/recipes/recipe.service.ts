@@ -14,7 +14,7 @@ export class RecipeService {
   new Recipe('big fat fish','this is a simple text', 'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/12/Shakshuka-19.jpg',[
     new Ingredient('fish' , 1),
     new Ingredient('fries', 20)
-  ])
+  ]),
 ];
 constructor(private slService: ShoppingListService){}
 // recipeSelected = new EventEmitter<Recipe>();
