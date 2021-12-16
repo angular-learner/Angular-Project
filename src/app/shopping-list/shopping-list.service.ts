@@ -1,4 +1,4 @@
-import { Subject } from "rxjs";
+import { Subject } from "rxjs/Subject";
 import { Ingredient } from "../shared/ingredient.model";
 
 export class ShoppingListService {
@@ -9,9 +9,13 @@ startEditing = new Subject<number>();
         new Ingredient('Tomatoes',10),
       ];   
 
-      getIngredient(){
+      getIngredients(){
           return this.ingredients.slice();
       }
+
+      getIngredient(index:number){
+        return this.ingredients[index];
+    }
 
       addIngredient(ingredient: Ingredient){
           this.ingredients.push(ingredient);
@@ -23,6 +27,11 @@ startEditing = new Subject<number>();
 
         //   }
         this.ingredients.push(...ingredients);
+        this.ingredientsChanged.next(this.ingredients.slice());
+      }
+
+      updateIngredient(index:number, newIngredient: Ingredient){
+        this.ingredients[index] = newIngredient;
         this.ingredientsChanged.next(this.ingredients.slice());
       }
 }
