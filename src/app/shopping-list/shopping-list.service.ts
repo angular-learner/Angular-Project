@@ -34,4 +34,9 @@ startEditing = new Subject<number>();
         this.ingredients[index] = newIngredient;
         this.ingredientsChanged.next(this.ingredients.slice());
       }
+
+      deleteIndredient(index:number){
+        this.ingredients.splice(index, 1);
+        this.ingredientsChanged.next(this.ingredients.slice());
+      }
 }
