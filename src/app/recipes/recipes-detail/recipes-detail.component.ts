@@ -32,7 +32,7 @@ this.route.params.subscribe(
 
   onDeleteRecipe(){
     this.recipeService.deleteRecipe(this.id);
-    // this.router.navigate
+    this.router.navigate(['/recipes']);
   }
 
 }
