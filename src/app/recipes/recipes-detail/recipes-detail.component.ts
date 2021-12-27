@@ -30,4 +30,9 @@ this.route.params.subscribe(
     this.recipeService.addIngredientsToSL(this.recipe.ingredients);
   }
 
+  onDeleteRecipe(){
+    this.recipeService.deleteRecipe(this.id);
+    // this.router.navigate
+  }
+
 }
