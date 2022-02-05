@@ -14,6 +14,10 @@ export class HeaderComponent{
         this.dataService.storeRecipes();
     }
 
+    onFetchData(){
+        this.dataService.fetchRecipes();
+    }
+
     onSelect(feature: string){
         this.onFeatureSelect.emit(feature);
 
